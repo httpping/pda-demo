@@ -22,6 +22,7 @@ import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
 import com.olc.model.InventoryModel;
 import com.olc.reader.IBluetoothCallback;
 import com.olc.reader.MainActivity;
@@ -37,6 +38,8 @@ import com.olc.util.CLog;
 import com.olc.util.ErrorCodeInfo;
 import com.olc.util.Util;
 import com.olc.view.FlexibleListView;
+import com.olc.web.bean.JsResponse;
+import com.olc.web.util.FileOptions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,7 +53,10 @@ public class UHFFragment extends LazyFragment implements View.OnClickListener, A
     Toolbar toolbar;
     TextView tv_title;
 
+    Gson gson = new Gson();
+
     private View mView;
+    Button btnSubmit;
     private TextView tv_readcount, tv_totalcount;
     private TextView tv_cmd_execute_time, tv_running_time;
     private RadioGroup rg;
@@ -274,6 +280,7 @@ public class UHFFragment extends LazyFragment implements View.OnClickListener, A
         rb_tid = (RadioButton) mView.findViewById(R.id.rb_tid);
         btn_inventory = (Button)mView.findViewById(R.id.btn_inventory);
         cb_continue = (CheckBox)mView.findViewById(R.id.cb_continue);
+        btnSubmit = mView.findViewById(R.id.btn_submit);
 
         cb_continue.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -325,6 +332,23 @@ public class UHFFragment extends LazyFragment implements View.OnClickListener, A
                 setCurrentPageSelect();
             }
         }
+
+        //落库文件
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+//                Toast.makeText(getContext(),"ss"+adapter.inventorys.size(),0).show();
+                String ufh_json = gson.toJson(adapter.inventorys);
+                JsResponse response = FileOptions.getInstance(getActivity()).writeFile("uhf.json", ufh_json);
+                if (response.issuccess()){
+                    getActivity().finish();
+                }else {
+                    Toast.makeText(getContext(),response.error,Toast.LENGTH_LONG).show();
+                }
+
+            }
+        });
     }
 
     @Override

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:orientation="vertical">
+
+    <SearchView
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:iconifiedByDefault="false"
+        android:visibility="visible" />
+
+    <com.olc.view.FlexibleListView
+        android:id="@+id/fl_scan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_bottom"
+        android:layout_below="@+id/search"
+        android:layout_centerInParent="true" />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cb_continue"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="@string/scan_continue_cb" />
+
+        <Button
+            android:id="@+id/btn_scan"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/btn_scanbg"
+            android:text="@string/scan_btn" />
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/btn_scanbgnew"
+            android:text="@string/scan_btn_clean" />
+
+    </LinearLayout>
+</RelativeLayout>

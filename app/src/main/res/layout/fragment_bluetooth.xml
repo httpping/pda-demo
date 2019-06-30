@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:orientation="vertical">
+
+            <com.olc.view.AutoSwitchView
+                android:id="@+id/loopswitch"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:baselineAligned="false"></com.olc.view.AutoSwitchView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="0.6"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_state"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:text="@string/bluetooth_disconn_device" />
+
+            <ImageView
+                android:id="@+id/iv_btState"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/r" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_alignParentBottom="true"
+                android:layout_weight="0.3"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_btconn"
+                    android:layout_width="0dp"
+                    android:layout_height="64dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_scanbg"
+                    android:text="@string/bluetooth_btn_conn" />
+
+                <Button
+                    android:id="@+id/btn_btdisconn"
+                    android:layout_width="0dp"
+                    android:layout_height="64dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_scanbgnew"
+                    android:text="@string/bluetooth_btn_disconn" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_alignParentBottom="true"
+                android:layout_weight="0.3"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_scan"
+                    android:layout_width="0dp"
+                    android:layout_height="64dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_scanbgnew"
+                    android:text="@string/bluetooth_btn_scan" />
+
+                <Button
+                    android:id="@+id/btn_uhf"
+                    android:layout_width="0dp"
+                    android:layout_height="64dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_scanbg"
+                    android:text="@string/bluetooth_btn_uhf" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

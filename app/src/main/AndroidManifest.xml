@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.olc.reader">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <!-- uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/ -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission-sdk-23 android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission-sdk-23 android:name="android.permission.READ_LOGS" />
+
+    <application
+        android:name=".ReaderCtrlApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--<service android:name=".HeartService">
+            <intent-filter>
+                <action android:name="ReaderCtrl_Heart_Service" />
+            </intent-filter>
+        </service>-->
+
+        <activity android:name=".ReaderActivity" />
+        <activity
+            android:name="com.olc.bluetooth.BluetoothDevicesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.olc.uhf.FuncationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.olc.uhf.UHFReadActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <activity
+            android:name="com.olc.uhf.UHFWriteActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <activity
+            android:name="com.olc.uhf.UHFLockActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <activity
+            android:name="com.olc.uhf.UHFKillActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+
+        <service
+            android:name="com.olc.reader.serviceimp.ReaderCtrlService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.olc.reader.service.ReaderCtrlService" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

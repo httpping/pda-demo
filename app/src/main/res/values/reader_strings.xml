@@ -1,0 +1,45 @@
+<resources>
+    <string name="command_success">Command success</string>
+    <string name="command_fail">Command fail</string>
+    <string name="mcu_reset_error">MCU reset error</string>
+    <string name="cw_on_error">CW on error</string>
+    <string name="antenna_missing_error">Antenna missing error</string>
+    <string name="write_flash_error">Write flash error</string>
+    <string name="read_flash_error">Read flash error</string>
+    <string name="set_output_power_error">Set output power error</string>
+    <string name="tag_inventory_error">Tag inventory error</string>
+    <string name="tag_read_error">Tag read error</string>
+    <string name="tag_write_error">Tag write error</string>
+    <string name="tag_lock_error">Tag lock error</string>
+    <string name="tag_kill_error">Tag kill error</string>
+    <string name="no_tag_error">No tag error</string>
+    <string name="inventory_ok_but_access_fail">Inventory ok but access fail</string>
+    <string name="buffer_is_empty_error">Buffer is empty error</string>
+    <string name="nxp_custom_command_fail">Nxp custom command fail</string>
+    <string name="access_or_password_error">Access or password error</string>
+    <string name="parameter_invalid">Parameter invalid</string>
+    <string name="parameter_invalid_wordCnt_too_long">Parameter invalid wordCnt too long</string>
+    <string name="parameter_invalid_membank_out_of_range">Parameter invalid membank out of range</string>
+    <string name="parameter_invalid_lock_region_out_of_range">Parameter invalid lock region out of range</string>
+    <string name="parameter_invalid_lock_action_out_of_range">Parameter invalid lock action out of range</string>
+    <string name="parameter_reader_address_invalid">Parameter reader address invalid</string>
+    <string name="parameter_invalid_antenna_id_out_of_range">Parameter invalid antenna id out of range</string>
+    <string name="parameter_invalid_output_power_out_of_range">Parameter invalid output power out of range</string>
+    <string name="parameter_invalid_frequency_region_out_of_range">Parameter invalid frequency region out of range</string>
+    <string name="parameter_invalid_baudrate_out_of_range">Parameter invalid baudrate out of range</string>
+    <string name="parameter_beeper_mode_out_of_range">Parameter beeper mode out of range</string>
+    <string name="parameter_epc_match_len_too_long">Parameter epc match len too long</string>
+    <string name="parameter_epc_match_len_error">Parameter epc match len error</string>
+    <string name="parameter_invalid_epc_match_mode">Parameter invalid epc match mode</string>
+    <string name="parameter_invalid_frequency_range">Parameter invalid frequency range</string>
+    <string name="fail_to_get_RN16_from_tag">Fail to get RN16 from tag</string>
+    <string name="parameter_invalid_drm_mode">Parameter invalid drm mode</string>
+    <string name="pll_lock_fail">Pll lock fail</string>
+    <string name="rf_chip_fail_to_response">Rf chip fail to response</string>
+    <string name="fail_to_achieve_desired_output_power">Fail to achieve desired output power</string>
+    <string name="copyright_authentication_fail">Copyright authentication fail</string>
+    <string name="spectrum_regulation_error">Spectrum regulation error</string>
+    <string name="output_power_too_low">Output power too low</string>
+    <string name="fail_to_get_rf_port_return_loss">Fail to get rf port return loss</string>
+
+</resources>

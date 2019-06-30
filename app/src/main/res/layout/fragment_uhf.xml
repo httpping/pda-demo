@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dip"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/uhf_read_tag_total_count" />
+
+                <TextView
+                    android:id="@+id/tv_totalcount"
+                    android:layout_width="60dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/uhf_read_tag_cumulative" />
+
+                <TextView
+                    android:id="@+id/tv_readcount"
+                    android:layout_width="60dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dip"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/uhf_read_cmd_time" />
+
+                <TextView
+                    android:id="@+id/tv_cmd_execute_time"
+                    android:layout_width="60dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/uhf_read_cmd_cumulative" />
+
+                <TextView
+                    android:id="@+id/tv_running_time"
+                    android:layout_width="60dip"
+                    android:layout_height="match_parent"
+                    android:gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/black" />
+
+        <RadioGroup
+            android:id="@+id/rg"
+            android:layout_width="match_parent"
+            android:layout_height="60dip"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_repeat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="@string/uhf_read_tag_repeat" />
+
+            <RadioButton
+                android:id="@+id/rb_unrepeat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/uhf_read_tag_norepeat" />
+
+            <RadioButton
+                android:id="@+id/rb_tid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/uhf_read_tid" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/black" />
+
+        <SearchView
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:iconifiedByDefault="false"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+    <com.olc.view.FlexibleListView
+        android:id="@+id/fl_btDevices"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_bottom"
+        android:layout_below="@+id/ll_top"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="-3dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cb_tid"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="@string/uhf_read_tid"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/cb_continue"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="@string/scan_continue_cb" />
+
+        <Button
+            android:id="@+id/btn_inventory"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_weight="0.6"
+            android:background="@drawable/btn_scanbg"
+            android:text="@string/uhf_read_btn_inventory" />
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_weight="0.4"
+            android:background="@drawable/btn_scanbgnew"
+            android:text="@string/uhf_read_btn_clean" />
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_weight="0.4"
+            android:background="@drawable/btn_scanbgnew"
+            android:text="@string/uhf_read_btn_submit" />
+
+    </LinearLayout>
+
+</RelativeLayout>

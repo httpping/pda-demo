@@ -1,0 +1,45 @@
+<resources>
+    <string name="command_success">命令成功完成</string>
+    <string name="command_fail">命令执行失败</string>
+    <string name="mcu_reset_error">CPU复位错误</string>
+    <string name="cw_on_error">打开CW错误</string>
+    <string name="antenna_missing_error">天线未连接</string>
+    <string name="write_flash_error">写Flash错误</string>
+    <string name="read_flash_error">读Flash错误</string>
+    <string name="set_output_power_error">设置发射功率错误</string>
+    <string name="tag_inventory_error">盘存标签错误</string>
+    <string name="tag_read_error">读标签错误</string>
+    <string name="tag_write_error">写标签错误</string>
+    <string name="tag_lock_error">锁定标签错误</string>
+    <string name="tag_kill_error">灭活标签错误</string>
+    <string name="no_tag_error">无可操作标签错误</string>
+    <string name="inventory_ok_but_access_fail">成功盘存但访问失败</string>
+    <string name="buffer_is_empty_error">缓存为空</string>
+    <string name="nxp_custom_command_fail">NXP芯片自定义指令失败</string>
+    <string name="access_or_password_error">访问标签错误或访问密码错误</string>
+    <string name="parameter_invalid">无效的参数</string>
+    <string name="parameter_invalid_wordCnt_too_long">wordCnt参数超过规定长度</string>
+    <string name="parameter_invalid_membank_out_of_range">MemBank参数超出范围</string>
+    <string name="parameter_invalid_lock_region_out_of_range">Lock数据区参数超出范围</string>
+    <string name="parameter_invalid_lock_action_out_of_range">LockType参数超出范围</string>
+    <string name="parameter_reader_address_invalid">读写器地址无效</string>
+    <string name="parameter_invalid_antenna_id_out_of_range">Antenna_id 超出范围</string>
+    <string name="parameter_invalid_output_power_out_of_range">输出功率参数超出范围</string>
+    <string name="parameter_invalid_frequency_region_out_of_range">射频规范区域参数超出范围</string>
+    <string name="parameter_invalid_baudrate_out_of_range">波特率参数超出范围</string>
+    <string name="parameter_beeper_mode_out_of_range">蜂鸣器设置参数超出范围</string>
+    <string name="parameter_epc_match_len_too_long">EPC匹配长度越界</string>
+    <string name="parameter_epc_match_len_error">EPC匹配长度错误</string>
+    <string name="parameter_invalid_epc_match_mode">EPC匹配参数超出范围</string>
+    <string name="parameter_invalid_frequency_range">频率范围设置参数错误</string>
+    <string name="fail_to_get_RN16_from_tag">无法接收标签的RN16</string>
+    <string name="parameter_invalid_drm_mode">DRM设置参数错误</string>
+    <string name="pll_lock_fail">PLL不能锁定</string>
+    <string name="rf_chip_fail_to_response">射频芯片无响应</string>
+    <string name="fail_to_achieve_desired_output_power">输出达不到指定的输出功率</string>
+    <string name="copyright_authentication_fail">版权认证未通过</string>
+    <string name="spectrum_regulation_error">频谱规范设置错误</string>
+    <string name="output_power_too_low">输出功率过低</string>
+    <string name="fail_to_get_rf_port_return_loss">测量回波损耗失败</string>
+
+</resources>

@@ -1,0 +1,141 @@
+<resources>
+    <string name="app_name">ReaderCtrl</string>
+
+    <string name="app_title">ReaderCtrl</string>
+    <string name="toast_bluetooth_available">Bluetooth is not available</string>
+    <string name="toast_app_exit">Press again to exit</string>
+
+    <string name="tab_page_title_first">Home</string>
+    <string name="tab_page_title_uhf">UHF</string>
+    <string name="tab_page_title_scan">Scan</string>
+
+    <string name="toast_bluetooth_conn_success">Connected Success!</string>
+    <string name="toast_bluetooth_conn_failed">Connected Failed!</string>
+    <string name="toast_bluetooth_conn_discon">Disconnected</string>
+    <string name="title_bluetooth_conn_success">Connected to </string>
+    <string name="title_bluetooth_conn_failed">Unable to connect </string>
+    <string name="title_bluetooth_conn_discon">Connection lost </string>
+    <string name="title_bluetooth_conn_conning">Connecting to %s</string>
+    <string name="title_bluetooth_no_device">No devices found</string>
+    <string name="title_bluetooth_conn_select">Select a device to connect</string>
+
+    <string name="bluetooth_conn_device">Connect to the device:%s</string>
+    <string name="bluetooth_disconn_device">Device not connected</string>
+    <string name="bluetooth_discovery_hint">Available Bluetooth device</string>
+    <string name="bluetooth_discovery_button">Discovery</string>
+    <string name="bluetooth_discovery_cancel">Cancel</string>
+    <string name="bluetooth_btn_conn">Connect</string>
+    <string name="bluetooth_btn_disconn">Disconnect</string>
+    <string name="bluetooth_btn_clean_device">Clear save device</string>
+    <string name="bluetooth_btn_clean_log">Clear logs</string>
+    <string name="bluetooth_btn_about">About</string>
+    <string name="bluetooth_btn_scan">Scan</string>
+    <string name="bluetooth_btn_uhf">UHF</string>
+
+    <string name="dialog_device_remove_title">Caveat</string>
+    <string name="dialog_device_remove_msg">Confirm to delete?</string>
+    <string name="dialog_device_remove_ok">Ok</string>
+    <string name="dialog_device_remove_no">Cancel</string>
+
+    <string name="dialog_more_title">Advanced</string>
+    <string name="dialog_more_item_reader_temperature">Reader operating temperature</string>
+
+    <string name="reader_temperature_bluetooth_discon_toast">Bluetooth is not connected, please connect Bluetooth first</string>
+    <string name="reader_temperature">Reader operating temperature %s%d °C</string>
+
+    <string name="uhf_read_tid_failed">TID read failed.</string>
+
+    <string name="uhf_function">UHF operation</string>
+    <string name="uhf_function_read">Read</string>
+    <string name="uhf_function_write">Write</string>
+    <string name="uhf_function_lock">Lock</string>
+    <string name="uhf_function_kill">Kill</string>
+
+    <string name="uhf_read_tag_total_count">Tag Total Count: </string>
+    <string name="uhf_read_tag_cumulative">Cumulative return data: </string>
+    <string name="uhf_read_cmd_time">Cmd execute time(ms): </string>
+    <string name="uhf_read_cmd_cumulative">Cumulative running time(ms):</string>
+    <string name="uhf_read_tag_repeat">Tag repeat</string>
+    <string name="uhf_read_tag_norepeat">Tag not repeat</string>
+    <string name="uhf_read_tid">TID</string>
+    <string name="uhf_read_btn_inventory">Inventory</string>
+    <string name="uhf_continue_btn">Continue Inventory</string>
+    <string name="uhf_stop_btn">Stop Inventory</string>
+    <string name="uhf_read_btn_tag_select">Tag Select</string>
+    <string name="uhf_read_tagseecct_info">Tag Seclec : %s</string>
+    <string name="uhf_read_toast_tagselect">Please tag select first!</string>
+    <string name="uhf_read_toast_wordadd">WordAdd is NULL!</string>
+    <string name="uhf_read_toast_wordcnt">WordCnt is NULL!</string>
+    <string name="uhf_read_toast_pwd">PassWord must be 4 bytes!</string>
+    <string name="uhf_read_info">Read : %s</string>
+    <string name="uhf_read_success_info">%sRead %s : %s</string>
+    <string name="uhf_read_failed_info">Read %s : %s</string>
+
+    <string name="uhf_kill_hint_pwd">Kill PassWord(Hex) RESERVED(0-1 word) Cannot be destroyed with default password</string>
+    <string name="uhf_kill_btn_clean">Clean</string>
+    <string name="uhf_kill_btn">Clean</string>
+    <string name="uhf_kill_btn_getpwd">Get password</string>
+    <string name="uhf_kill_toast_epc">Please select EPC</string>
+    <string name="uhf_kill_toast_pwd">PassWord must be 4 bytes</string>
+    <string name="uhf_kill_info">Kill : %s</string>
+    <string name="uhf_kill_info_pwd">Please change your password first</string>
+    <string name="uhf_kill_info_readpwd">%sRead RESERVED: %s%s</string>
+
+    <string name="uhf_lock_hint_membanklock">MemBank Lock</string>
+    <string name="uhf_lock_Lock_UserMemory">User</string>
+    <string name="uhf_lock_Lock_TidMemory">Tid</string>
+    <string name="uhf_lock_Lock_EPCMemory">EPC</string>
+    <string name="uhf_lock_Lock_AccessPassword">Access Pwd</string>
+    <string name="uhf_lock_Lock_KillPassword">Kill Pwd</string>
+    <string name="uhf_lock_type">Lock Type</string>
+    <string name="uhf_lock_LockType_Open">Open</string>
+    <string name="uhf_lock_LockType_Lock">Lock</string>
+    <string name="uhf_lock_LockType_PermanentOpene">Permanent Opene</string>
+    <string name="uhf_lock_LockType_PermanentLock">Permanent Lock</string>
+    <string name="uhf_lock_hint_pwd">Access PassWord(Hex) RESERVED(2-3 word)</string>
+    <string name="uhf_lock_btn_clean">Clean</string>
+    <string name="uhf_lock_btn">Clean</string>
+    <string name="uhf_lock_btn_getpwd">Get password</string>
+    <string name="uhf_lock_info">Lock : %s</string>
+    <string name="uhf_lock_info_pwd">Please change your password first</string>
+    <string name="uhf_lock_info_readpwd">%sRead RESERVED: %s%s</string>
+
+    <string name="uhf_read_hint_membank">MemBank</string>
+    <string name="uhf_read_RESERVED">RESERVED</string>
+    <string name="uhf_read_EPC">EPC</string>
+    <string name="uhf_read_TID">TID</string>
+    <string name="uhf_read_USER">USER</string>
+    <string name="uhf_read_hint_wordadd">WordAdd(Dec)</string>
+    <string name="uhf_read_hint_wordcnt">WordCnt(Dec)</string>
+    <string name="uhf_read_hint_pwd">PassWord(Hex)</string>
+    <string name="uhf_read_btn_clean">Clean</string>
+    <string name="uhf_read_btn_submit">Submit</string>
+
+    <string name="uhf_read_btn">Read</string>
+    <string name="uhf_read_toast_membank">Please check MemBank</string>
+
+    <string name="uhf_write_hint_membank">MemBank</string>
+    <string name="uhf_write_RESERVED">RESERVED</string>
+    <string name="uhf_write_EPC">EPC</string>
+    <string name="uhf_write_TID">TID</string>
+    <string name="uhf_write_USER">USER</string>
+    <string name="uhf_write_hint_wordadd">WordAdd(Dec)</string>
+    <string name="uhf_write_hint_wordcnt">WordCnt(Dec)</string>
+    <string name="uhf_write_hint_pwd">PassWord(Hex)</string>
+    <string name="uhf_write_hint_writedata">Write Datas(Hex)</string>
+    <string name="uhf_write_btn_clean">Clean</string>
+    <string name="uhf_write_btn">Write</string>
+    <string name="uhf_write_btn_readtest">Read test</string>
+    <string name="uhf_write_info">Write %s : %s</string>
+    <string name="uhf_write_data_toast">Data is NULL</string>
+    <string name="uhf_write_data_match_toast">Data length does not match.</string>
+
+    <string name="scan_btn">Scan</string>
+    <string name="scan_continue_btn">Continue Scan</string>
+    <string name="scan_stop_btn">Stop Scan</string>
+    <string name="scan_btn_clean">Clean</string>
+    <string name="scan_hint_scaning">Scanning</string>
+    <string name="scan_continue_cb">Continue</string>
+
+
+</resources>

@@ -1,0 +1,141 @@
+<resources>
+    <string name="app_name">ReaderCtrl</string>
+
+    <string name="app_title">ReaderCtrl</string>
+    <string name="toast_bluetooth_available">蓝牙无法使用</string>
+    <string name="toast_app_exit">再按一次退出</string>
+
+    <string name="tab_page_title_first">首页</string>
+    <string name="tab_page_title_uhf">UHF</string>
+    <string name="tab_page_title_scan">扫描</string>
+
+    <string name="toast_bluetooth_conn_success">连接成功!</string>
+    <string name="toast_bluetooth_conn_failed">连接失败!</string>
+    <string name="toast_bluetooth_conn_discon">连接断开</string>
+    <string name="title_bluetooth_conn_success">连接到 </string>
+    <string name="title_bluetooth_conn_failed">无法连接 </string>
+    <string name="title_bluetooth_conn_discon">连接丢失 </string>
+    <string name="title_bluetooth_conn_conning">正在连接 %s</string>
+    <string name="title_bluetooth_no_device">无可用设备</string>
+    <string name="title_bluetooth_conn_select">选择一个设备连接</string>
+
+    <string name="bluetooth_conn_device">连接到设备:%s</string>
+    <string name="bluetooth_disconn_device">设备未连接</string>
+    <string name="bluetooth_discovery_hint">可用的蓝牙设备</string>
+    <string name="bluetooth_discovery_button">搜索</string>
+    <string name="bluetooth_discovery_cancel">取消</string>
+    <string name="bluetooth_btn_conn">连接</string>
+    <string name="bluetooth_btn_disconn">断开</string>
+    <string name="bluetooth_btn_clean_device">清除保存设备</string>
+    <string name="bluetooth_btn_clean_log">清除日志</string>
+    <string name="bluetooth_btn_about">关于</string>
+    <string name="bluetooth_btn_scan">Scan</string>
+    <string name="bluetooth_btn_uhf">UHF</string>
+
+    <string name="dialog_device_remove_title">警告</string>
+    <string name="dialog_device_remove_msg">确定删除吗？</string>
+    <string name="dialog_device_remove_ok">确定</string>
+    <string name="dialog_device_remove_no">取消</string>
+
+    <string name="dialog_more_title">高级</string>
+    <string name="dialog_more_item_reader_temperature">Reader工作温度</string>
+
+    <string name="reader_temperature_bluetooth_discon_toast">蓝牙未连接,请先连接蓝牙</string>
+    <string name="reader_temperature">Reader 工作温度 %s%d °C</string>
+
+    <string name="uhf_read_tid_failed">TID读取失败.</string>
+
+    <string name="uhf_function">UHF操作</string>
+    <string name="uhf_function_read">读</string>
+    <string name="uhf_function_write">写</string>
+    <string name="uhf_function_lock">锁定</string>
+    <string name="uhf_function_kill">销毁</string>
+
+    <string name="uhf_read_tag_total_count">标签总数: </string>
+    <string name="uhf_read_tag_cumulative">累计返回数: </string>
+    <string name="uhf_read_cmd_time">命令执行时间(ms): </string>
+    <string name="uhf_read_cmd_cumulative">累计执行时间(ms):</string>
+    <string name="uhf_read_tag_repeat">标签重复</string>
+    <string name="uhf_read_tag_norepeat">标签不重复</string>
+    <string name="uhf_read_tid">TID</string>
+    <string name="uhf_read_btn_inventory">轮询</string>
+    <string name="uhf_continue_btn">连续轮询</string>
+    <string name="uhf_stop_btn">停止轮询</string>
+    <string name="uhf_read_btn_tag_select">过滤</string>
+    <string name="uhf_read_tagseecct_info">过滤 : %s</string>
+    <string name="uhf_read_toast_tagselect">请先选定标签!</string>
+    <string name="uhf_read_toast_wordadd">起始地址不能为空!</string>
+    <string name="uhf_read_toast_wordcnt">数据长度不能为空!</string>
+    <string name="uhf_read_toast_pwd">密码必须4bytes!</string>
+    <string name="uhf_read_info">读 : %s</string>
+    <string name="uhf_read_success_info">%s读%s : %s</string>
+    <string name="uhf_read_failed_info">读 %s : %s</string>
+
+    <string name="uhf_kill_hint_pwd">销毁密码(Hex) 不能使用默认销毁密码</string>
+    <string name="uhf_kill_btn_clean">清除</string>
+    <string name="uhf_kill_btn">销毁</string>
+    <string name="uhf_kill_btn_getpwd">获取密码</string>
+    <string name="uhf_kill_toast_epc">请先选定EPC</string>
+    <string name="uhf_kill_toast_pwd">密码必须4bytes</string>
+    <string name="uhf_kill_info">销毁 : %s</string>
+    <string name="uhf_kill_info_pwd">请先修改销毁密码</string>
+    <string name="uhf_kill_info_readpwd">%s读 销毁密码: %s%s</string>
+
+    <string name="uhf_lock_hint_membanklock">MemBank Lock</string>
+    <string name="uhf_lock_Lock_UserMemory">User</string>
+    <string name="uhf_lock_Lock_TidMemory">Tid</string>
+    <string name="uhf_lock_Lock_EPCMemory">EPC</string>
+    <string name="uhf_lock_Lock_AccessPassword">Access Pwd</string>
+    <string name="uhf_lock_Lock_KillPassword">Kill Pwd</string>
+    <string name="uhf_lock_type">Lock Type</string>
+    <string name="uhf_lock_LockType_Open">开放</string>
+    <string name="uhf_lock_LockType_Lock">锁定</string>
+    <string name="uhf_lock_LockType_PermanentOpene">永久开放</string>
+    <string name="uhf_lock_LockType_PermanentLock">永久锁定</string>
+    <string name="uhf_lock_hint_pwd">访问密码(Hex) RESERVED(2-3 word)</string>
+    <string name="uhf_lock_btn_clean">清除</string>
+    <string name="uhf_lock_btn">锁定</string>
+    <string name="uhf_lock_btn_getpwd">获取密码</string>
+    <string name="uhf_lock_info">锁定 : %s</string>
+    <string name="uhf_lock_info_pwd">请先修改锁定密码</string>
+    <string name="uhf_lock_info_readpwd">%s读 锁定密码: %s%s</string>
+
+    <string name="uhf_read_hint_membank">MemBank</string>
+    <string name="uhf_read_RESERVED">RESERVED</string>
+    <string name="uhf_read_EPC">EPC</string>
+    <string name="uhf_read_TID">TID</string>
+    <string name="uhf_read_USER">USER</string>
+    <string name="uhf_read_hint_wordadd">起始地址(Dec)</string>
+    <string name="uhf_read_hint_wordcnt">数据长度(Dec)</string>
+    <string name="uhf_read_hint_pwd">密码(Hex)</string>
+    <string name="uhf_read_btn_clean">清除</string>
+    <string name="uhf_read_btn_submit">提交</string>
+
+    <string name="uhf_read_btn">读</string>
+    <string name="uhf_read_toast_membank">请选择 MemBank</string>
+
+    <string name="uhf_write_hint_membank">MemBank</string>
+    <string name="uhf_write_RESERVED">RESERVED</string>
+    <string name="uhf_write_EPC">EPC</string>
+    <string name="uhf_write_TID">TID</string>
+    <string name="uhf_write_USER">USER</string>
+    <string name="uhf_write_hint_wordadd">起始地址(Dec)</string>
+    <string name="uhf_write_hint_wordcnt">数据长度(Dec)</string>
+    <string name="uhf_write_hint_pwd">密码(Hex)</string>
+    <string name="uhf_write_hint_writedata">写入数据(Hex)</string>
+    <string name="uhf_write_btn_clean">清除</string>
+    <string name="uhf_write_btn">写</string>
+    <string name="uhf_write_btn_readtest">测试</string>
+    <string name="uhf_write_info">写 %s : %s</string>
+    <string name="uhf_write_data_toast">写入数据为空</string>
+    <string name="uhf_write_data_match_toast">写入数据长度不匹配.</string>
+
+    <string name="scan_btn">扫描</string>
+    <string name="scan_continue_btn">连续扫描</string>
+    <string name="scan_stop_btn">停止扫描</string>
+    <string name="scan_btn_clean">清除</string>
+    <string name="scan_hint_scaning">正在扫描</string>
+    <string name="scan_continue_cb">连续</string>
+
+
+</resources>

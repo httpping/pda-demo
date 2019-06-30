@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dip"
+                android:layout_marginBottom="5dip"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_tag_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_selected_epc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical" />
+
+                    <Button
+                        android:id="@+id/btn_tag_select"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_scanbg"
+                        android:text="@string/uhf_read_btn_tag_select" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dip"
+                android:layout_marginBottom="5dip"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dip"
+                        android:background="@color/subtitlecolor"
+                        android:gravity="center_vertical"
+                        android:text="@string/uhf_lock_hint_membanklock" />
+
+                    <com.olc.view.RadioGroup
+                        android:id="@+id/rg_Lock_MemBank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:paddingTop="5dip"
+                            android:paddingBottom="5dip">
+
+                            <RadioButton
+                                android:id="@+id/rb_Lock_UserMemory"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:checked="true"
+                                android:text="@string/uhf_lock_Lock_UserMemory" />
+
+                            <RadioButton
+                                android:id="@+id/rb_Lock_TidMemory"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/uhf_lock_Lock_TidMemory" />
+
+                            <RadioButton
+                                android:id="@+id/rb_Lock_EPCMemory"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/uhf_lock_Lock_EPCMemory" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:paddingTop="5dip"
+                            android:paddingBottom="5dip">
+
+                            <RadioButton
+                                android:id="@+id/rb_Lock_AccessPassword"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/uhf_lock_Lock_AccessPassword" />
+
+                            <RadioButton
+                                android:id="@+id/rb_Lock_KillPassword"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/uhf_lock_Lock_KillPassword" />
+                        </LinearLayout>
+                    </com.olc.view.RadioGroup>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dip"
+                android:layout_marginBottom="5dip"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dip"
+                        android:background="@color/subtitlecolor"
+                        android:gravity="center_vertical"
+                        android:text="@string/uhf_lock_type" />
+
+                    <com.olc.view.RadioGroup
+                        android:id="@+id/rg_LockType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:paddingTop="5dip"
+                            android:paddingBottom="5dip">
+
+                            <RadioButton
+                                android:id="@+id/rb_LockType_Open"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:checked="true"
+                                android:text="@string/uhf_lock_LockType_Open" />
+
+                            <RadioButton
+                                android:id="@+id/rb_LockType_Lock"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/uhf_lock_LockType_Lock" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:paddingTop="5dip"
+                            android:paddingBottom="5dip">
+
+                            <RadioButton
+                                android:id="@+id/rb_LockType_PermanentOpen"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/uhf_lock_LockType_PermanentOpene" />
+
+                            <RadioButton
+                                android:id="@+id/rb_LockType_PermanentLock"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/uhf_lock_LockType_PermanentLock" />
+                        </LinearLayout>
+                    </com.olc.view.RadioGroup>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:background="@color/black" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dip"
+                android:layout_marginBottom="5dip"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dip"
+                        android:background="@color/subtitlecolor"
+                        android:gravity="center_vertical"
+                        android:text="@string/uhf_lock_hint_pwd" />
+
+                    <EditText
+                        android:id="@+id/et_PassWord"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dip">
+
+                    <TextView
+                        android:id="@+id/tv_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:scrollbars="vertical" />
+
+                    <Button
+                        android:id="@+id/btn_clear"
+                        android:layout_width="100dip"
+                        android:layout_height="50dip"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_scanbgnew"
+                        android:text="@string/uhf_lock_btn_clean" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="5dip"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_lock"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/btn_scanbg"
+                    android:text="@string/uhf_lock_btn" />
+
+                <Button
+                    android:id="@+id/btn_readTest"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/btn_scanbgnew"
+                    android:text="@string/uhf_lock_btn_getpwd" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="5dip">
+
+        <Button
+            android:id="@+id/btn_read"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/avl_btn_confim"
+            android:text="@string/uhf_function_read"
+            android:layout_marginBottom="10dip"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_lock"
+            android:layout_width="match_parent"
+            android:layout_height="150dip"
+            android:background="@drawable/avl_btn_confim"
+            android:text="@string/uhf_function_lock"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="5dip">
+
+        <Button
+            android:id="@+id/btn_kill"
+            android:layout_width="match_parent"
+            android:layout_height="150dip"
+            android:background="@drawable/avl_btn_confim"
+            android:text="@string/uhf_function_kill"
+            android:layout_marginBottom="10dip"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_write"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/avl_btn_confim"
+            android:text="@string/uhf_function_write"
+            android:textSize="18sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计量器具便携采集仪</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/layer.js" type="text/javascript" charset="utf-8"></script>
+    <script>document.write('<script src="js/config.js?t=' + new Date().getTime() + '" type="text/javascript" charset="utf-8"><\/script>');</script>
+    <script>document.write('<script src="js/common.js?t=' + new Date().getTime() + '" type="text/javascript" charset="utf-8"><\/script>');</script>
+    <script>document.write('<script src="js/collection.js?t=' + new Date().getTime() + '" type="text/javascript" charset="utf-8"><\/script>');</script>
+</head>
+<body>
+<article class="aui-flexView">
+    <!-- header -->
+    <header class="aui-navBar aui-navBar-fixed">
+        <a href="javascript:history.back(-1)" class="aui-navBar-item">
+            <i class="icon icon-return"></i>
+        </a>
+        <div class="aui-center">
+            <span class="aui-center-title">数据采集</span>
+        </div>
+        <a href="javascript:;" class="aui-navBar-item">
+            <i class="icon icon-sys"></i>
+        </a>
+    </header>
+    <!-- body内容 -->
+    <section class="main">
+        <div class="collection-select">
+            <dl class="retrie">
+                <dt>
+                    <a id="area" href="javascript:;">资产类型</a>
+                    <a id="wage" href="javascript:;">条码规则</a>
+                </dt>
+                <dd class="area">
+                    <ul class="slide downlist zclist"></ul>
+                </dd>
+                <dd class="wage">
+                    <ul class="slide downlist tmlist"></ul>
+                </dd>
+            </dl>
+        </div>
+        <div class="collection-table" id="tableOperating">
+            <table>
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>电表条码*</th>
+                        <th>类型</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="tableData"></tbody>
+            </table>
+        </div>
+    </section>
+    <footer class="footer btn">
+        <a style="display:none" href="javascript:void(0)" class="showok" onclick="save()">
+            <i class="icon-determine"></i>
+            <h3>确认</h3>
+        </a>
+        <a href="javascript:void(0)" class="" onclick="scan()">
+            <i class="icon-scanning"></i>
+            <h3 class="scantext">开始扫描</h3>
+        </a>
+        <a style="display:none" href="javascript:void(0)" class="showexit" onclick="exit()">
+            <i class="icon-out"></i>
+            <h3>退出</h3>
+        </a>
+    </footer>
+</article>
+</body>
+</html>

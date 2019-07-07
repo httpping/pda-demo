@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>测试</title>
+    <script type="text/javascript">
+        function test(){
+           var r = window.tp.invokeJava('tp')
+		   alert(r)
+        }
+
+        function writef(){
+           var va =  document.getElementById("test").value
+           var fileName =  document.getElementById("fileName").value
+
+            //alert(va)
+           var json = {"action":"write_file","path":fileName,"data":va}
+		   //alert(json.data)
+           //alert(json)
+            var r = window.tp.invokeJava(JSON.stringify(json))
+            alert(r)
+        }
+
+        function readf(){
+            var fileName =  document.getElementById("fileName").value
+            var json = {"action":"read_file","path":fileName}
+            //alert(json.toString())
+            var r = window.tp.invokeJava(JSON.stringify(json))
+            alert(r)
+        }
+
+
+    </script>
+</head>
+<body>
+<br />
+
+<input  id="test" type="text" style="height:50px;" class="form-control" placeholder="文件内容" aria-label="Recipient's username" aria-describedby="basic-addon2">
+<input  id="fileName" type="text" style="height:50px;" class="form-control" placeholder="文件名" aria-label="Recipient's username" aria-describedby="basic-addon2">
+
+<hr/>
+<button style="width:100px;height:50px;" onclick="test()">test</button>
+
+<button style="width:100px;height:50px;" onclick="writef()">写文件</button>
+<button style="width:100px;height:50px;" onclick="readf()">读文件</button>
+
+
+
+</body>
+</html>

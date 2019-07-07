@@ -1,12 +1,15 @@
 package com.olc.web;
 
 import android.Manifest;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
@@ -17,6 +20,7 @@ import android.widget.ProgressBar;
 
 
 import com.olc.reader.R;
+import com.olc.web.bean.JsRequest;
 import com.olc.web.bean.JsResponse;
 import com.olc.web.util.FileOptions;
 import com.olc.web.util.StringUtil;
@@ -31,7 +35,7 @@ import com.utils.ui.ToastUtil;
  * @version 1.0
  * @date 2018/8/18 13:54
  */
-public abstract class BaseBrowserActivity extends FragmentActivity {
+public  class BaseBrowserActivity extends FragmentActivity {
     public WebView webView;
     public ProgressBar progressBar;
     /**
@@ -104,7 +108,7 @@ public abstract class BaseBrowserActivity extends FragmentActivity {
 //        webView.loadUrl("https://www.baidu.com/");
 
 //        webView.loadUrl("file:///android_asset/test.html");
-        webView.loadUrl("file:///android_asset/PDA/login.html");
+        webView.loadUrl("file:///android_asset/gw/home.html");
 
     }
 
@@ -162,6 +166,18 @@ public abstract class BaseBrowserActivity extends FragmentActivity {
             webView.destroy();
         }
     }
+
+    /* 改写物理按键返回的逻辑 */
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && webView.canGoBack()) {
+            // 返回上一页面
+            webView.goBack();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
 
     public String getUrl() {
         return url;
@@ -235,12 +251,20 @@ public abstract class BaseBrowserActivity extends FragmentActivity {
 
 
 
-            result = FileOptions.getInstance(this).writeFile("abc3.json","测试吧");
-            ToastUtil.showToast(this,result.code+"");
+//            result = FileOptions.getInstance(this).writeFile("abc3.json","测试吧");
+//            ToastUtil.showToast(this,result.code+"");
 
-            result = FileOptions.getInstance(this).readFile("abc1.json");
-            ToastUtil.showToast(this,result.code+" :" + result.data);
+//            result = FileOptions.getInstance(this).readFile("abc1.json");
+//            ToastUtil.showToast(this,result.code+" :" + result.data);
         }
     }
 
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == JsRequest.start_qr_request){
+            webView.loadUrl("javascript:fun_callback()");
+        }
+    }
 }

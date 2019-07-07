@@ -39,6 +39,8 @@ import com.olc.util.ErrorCodeInfo;
 import com.olc.util.Util;
 import com.olc.view.FlexibleListView;
 import com.olc.web.bean.JsResponse;
+import com.olc.web.bean.RfIdCode;
+import com.olc.web.util.EnDecode;
 import com.olc.web.util.FileOptions;
 
 import java.util.ArrayList;
@@ -338,10 +340,17 @@ public class UHFFragment extends LazyFragment implements View.OnClickListener, A
             @Override
             public void onClick(View v) {
 
-//                Toast.makeText(getContext(),"ss"+adapter.inventorys.size(),0).show();
-                String ufh_json = gson.toJson(adapter.inventorys);
+                List<RfIdCode> rfIdCodes = new ArrayList<>();
+                for (InventoryModel inventoryModel: adapter.inventorys){
+                    RfIdCode rfIdCode = new RfIdCode();
+                    rfIdCode.RfidCode = EnDecode.DecryptTagData(inventoryModel.getEPCHEX());
+                    rfIdCodes.add(rfIdCode);
+                }
+//              Toast.makeText(getContext(),"ss"+adapter.inventorys.size(),0).show();
+                String ufh_json = gson.toJson(rfIdCodes);
                 JsResponse response = FileOptions.getInstance(getActivity()).writeFile("uhf.json", ufh_json);
                 if (response.issuccess()){
+                    getActivity().setResult(0);
                     getActivity().finish();
                 }else {
                     Toast.makeText(getContext(),response.error,Toast.LENGTH_LONG).show();
@@ -754,8 +763,9 @@ public class UHFFragment extends LazyFragment implements View.OnClickListener, A
 
                 InventoryModel model = inventorys.get(position);
                 holder.tv_PC.setText((position + 1) + " . " + model.getPCHEX());
-                holder.tv_EPC.setText(model.getEPCHEX());
+                holder.tv_EPC.setText(model.getEPCHEX() );
                 holder.tv_count.setText("" + model.getCount());
+
                 if (rb_tid.isChecked()) {
                     holder.tv_tid.setVisibility(View.VISIBLE);
                     holder.tv_tid.setText(model.getTIDHEX());

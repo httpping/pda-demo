@@ -27,13 +27,17 @@
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity android:name="com.olc.web.BaseBrowserActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <!--<service android:name=".HeartService">
             <intent-filter>
                 <action android:name="ReaderCtrl_Heart_Service" />

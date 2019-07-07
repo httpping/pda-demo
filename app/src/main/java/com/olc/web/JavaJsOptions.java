@@ -25,10 +25,12 @@ package com.olc.web;
 */
 
 import android.app.Activity;
+import android.content.Intent;
 import android.webkit.JavascriptInterface;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
+import com.olc.reader.MainActivity;
 import com.olc.web.bean.JsRequest;
 import com.olc.web.bean.JsResponse;
 import com.olc.web.util.FileOptions;
@@ -62,6 +64,9 @@ public class JavaJsOptions {
                 response = FileOptions.getInstance(activity).writeFile(request.path,request.data);
             }else if (request.action.equals(JsRequest.read_file)){
                 response = FileOptions.getInstance(activity).readFile(request.path);
+            }else if (request.action.equals(JsRequest.start_qr)){
+                Intent intent = new Intent(activity,MainActivity.class);
+                activity.startActivityForResult(intent,JsRequest.start_qr_request);
             }
             return gson.toJson(response);
         } catch (JsonSyntaxException e) {
@@ -73,13 +78,15 @@ public class JavaJsOptions {
             response.error = "内部错误";
         }
 
-        try {
-            JsResponse result = FileOptions.getInstance(activity).writeFile("abc1.json", "xxx===谭平最帅");
-            ToastUtil.showToast(activity,result.code+"");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        return gson.toJson(response);
 
-        return data + " hello world! ";
+//        try {
+//            JsResponse result = FileOptions.getInstance(activity).writeFile("abc1.json", "xxx===谭平最帅");
+//            ToastUtil.showToast(activity,result.code+"");
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+
+//        return data + " hello world! ";
     }
 }

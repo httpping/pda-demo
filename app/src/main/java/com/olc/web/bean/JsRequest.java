@@ -36,6 +36,9 @@ public class JsRequest {
 
     public static final String write_file ="write_file";
     public static final String read_file = "read_file";
+    public static final String start_qr = "start_qr";
+    public static final int start_qr_request = 1000;
+
     public String action ;
     public String path;
     public String data;

@@ -137,7 +137,7 @@ public class FileOptions {
         } catch (Exception e) {
             e.printStackTrace();
             jsResponse.code = 500;
-            jsResponse.error =ERROR_FILE_WIRTE;
+            jsResponse.error ="读文件异常";
             return jsResponse;
         }
 
